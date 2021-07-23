@@ -1,0 +1,175 @@
+
+print("Welcome to php.");
+
+echo "<hr>";
+
+//Variables
+
+$fruit = "Apple";
+print($fruit);
+
+$num3 = 3;
+print($num3);
+
+$a = 3;
+$b = 4;
+$sum = $a + $b;
+print($sum);
+
+echo "<hr>";
+
+// echo and print
+echo can take multiple parameter to output
+echo is faster
+echo "Hello World!";
+
+Data types
+1. string: anything within the quotes eg. "Hello World"
+2. integer: whole number: -1, 0, 1, 100200
+3. float: 1.22, 10.5, 12.0
+4. boolean: True, False
+
+// if elseif else statement
+
+if(condition){
+    executes if condition is true
+} eslse {  
+    executes if condition is false
+}
+echo "<hr>";
+
+$x = 5;
+$y = 10;
+if($x > $y) {
+    echo "x is greater than y.";
+} else {
+    echo "y is greater than x.";
+}
+
+echo "<br>";
+$name = "John";
+if($name == "John") {
+    echo "Welcome $name";
+} elseif ($name == "Sam") {
+    echo "Welcome $name";
+} else {
+    echo 'Wrong Name';
+}
+
+echo "<hr>";
+// switch statement
+switch(variable) {
+    case 'value':
+        #code...
+        break;
+    case 'value':
+        #code...
+        break;
+    break:
+        #code...
+         break;
+}
+
+$num = 1;
+switch ($num) {
+    case 1:
+        echo "Number is 1";
+        break;
+    case 2:
+        echo "Number is 2";
+        break;
+    default:
+        echo "Wrong number choosen";
+        break;
+}
+
+// While Loop Statement
+
+while ($a <= 10) {
+    # code...
+}
+
+echo '<hr>';
+
+$num = 1;
+while ($num <= 10) {
+    echo "The number is $num <br>";
+    $num++;
+}
+
+echo '<hr>';
+
+// For Loop statement
+for ($i=0; $i < ; $i++) { 
+    # code...
+}
+
+for ($i=0; $i < 10; $i++) { 
+    echo "$i <br>";
+}
+
+echo '<hr>';
+//Array Statement
+$arr = ['apple', 'ball', 3, 23]; // method 1
+$arr2 = array('apple', 'ball', 3, 23); // method 2
+$i=0;
+while ($i <= 3) {
+    echo $arr[$i].'<br>';
+    $i++;
+}
+
+echo '<hr>';
+//For Each Loop Statement
+foreach ($variable as $key => $value) {
+    # code...
+}
+
+$arr = ['apple', 'ball', 'cat'];
+foreach ($arr as $a) {
+    echo "$a<br>";
+}
+
+//using key
+$arr = ['apple', 'ball', 'cat'];
+foreach ($arr as $a => $value) {
+    echo "$a $value<br>";
+}
+
+echo '<hr>';
+/*Function*/
+function FunctionName(Type $var = null)
+{
+    # code...
+}
+
+function Name($name)
+{
+    echo "My name is: $name";
+}
+
+Name('John');
+echo '<br>';
+function Add($a, $b)
+{
+    echo $a + $b;
+}
+
+Add(2, 4);
+
+
+//Form POST method
+
+    <form action="index.php" method="POST">
+        <label for="title">Title</label>
+        <input type="text" name="title">
+        <input type="submit" name="btnSubmit">
+    </form>
+    <?php
+    if(isset($_POST['btnSubmit'])) {
+        echo $_POST['title'];
+    }
+
+    ?>
+
+
+//Form GET method
