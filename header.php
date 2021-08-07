@@ -1,3 +1,0 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.6/tailwind.min.css" integrity="sha512-EYVjvPqURgm6pqtZxeqvlbZtnWjYmecnLS0QEedL51IUdaH0HXmSHjTKK7X1yWmiB3/5U1fwIv06ZDwLoo1LdA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twind/0.16.16/twind.js" integrity="sha512-FzaAQ6gIiBxcLZ3zPtGoYWvnNUmzdTfxrHrBjjxrB4ztHX63VR3l0twf6qsKn21tfPMoeyJhSrVikMv9BT8WCA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
