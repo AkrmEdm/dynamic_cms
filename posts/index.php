@@ -38,8 +38,8 @@
               </tr>
             </thead>
             <tbody>
+              <?php foreach($rows as $row): ?>
               <tr>
-                <?php foreach($rows as $row): ?>
                 <td><?= $row['id'] ?></td>
                 <td><?= $row['title'] ?></td>
                 <td><?= $row['content'] ?></td>
@@ -48,8 +48,8 @@
                   <a href="#" class="btn btn-primary">Edit</a>
                   <a href="#" class="btn btn-danger">Delete</a>
                 </td>
-                <?php endforeach ?>
               </tr>
+              <?php endforeach ?>
             </tbody>
           </table>
         </div>
