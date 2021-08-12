@@ -1,3 +1,9 @@
+<?php
+
+$domain ='http://localhost/php-cms/';
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -17,7 +23,7 @@
   <!-- <link href="../css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <meta name="theme-color" content="#7952b3"> -->
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?= $domain ?>/css/bootstrap.min.css" rel="stylesheet">
   <meta name="theme-color" content="#7952b3">
 
 
@@ -39,7 +45,7 @@
 
 
   <!-- Custom styles for this template -->
-  <link href="../css/dashboard.css" rel="stylesheet">
+  <link href="<?= $domain ?>/css/dashboard.css" rel="stylesheet">
 </head>
 
 <body>
