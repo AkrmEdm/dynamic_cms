@@ -18,7 +18,9 @@ $domain ='http://localhost/php-cms/';
   <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
 
 
-
+  <!-- Tiny MCE -->
+  <script src="https://cdn.tiny.cloud/1/t7lsocji9prze8b8ssenauzssy03opw6rdypsr9bxb2amoe4/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  
   <!-- Bootstrap core CSS -->
   <!-- <link href="../css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
