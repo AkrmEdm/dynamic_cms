@@ -1,4 +1,6 @@
 # php-cms
 Dynamic Content Management System with PHP and MySQL
 
--> Created Post Index View
+Article Index View
+
+Add New Article Form
