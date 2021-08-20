@@ -11,7 +11,7 @@
 
 <div class="mb-3 mt-3">
     <label for="published_date" class="form-label">Enter Publishing Date</label>
-    <input type="date" class="form-control" id="published_date" name="published_date">
+    <input type="date" class="form-control" id="published_date" name="published_date" value="<?= date('Y-m-d') ?>">
 </div>
 
 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
