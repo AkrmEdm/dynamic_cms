@@ -42,7 +42,7 @@
                 <td><?= $row['content'] ?></td>
                 <td><?= $row['published_date'] ?></td>
                 <td>
-                  <a href="#" class="btn btn-primary">Edit</a>
+                  <a href="<?= $domain.'/posts/edit.php?post_id='.$row['id'] ?>" class="btn btn-primary">Edit</a>
                   <a href="#" class="btn btn-danger">Delete</a>
                 </td>
               </tr>
