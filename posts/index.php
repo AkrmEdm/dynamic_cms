@@ -38,8 +38,8 @@
               <?php foreach($rows as $row): ?>
               <tr>
                 <td><?= $row['id'] ?></td>
-                <td><?= $row['title'] ?></td>
-                <td><?= $row['content'] ?></td>
+                <td><?= htmlentities($row['title']) ?></td>
+                <td><?= htmlentities($row['content']) ?></td>
                 <td><?= $row['published_date'] ?></td>
                 <td>
                   <a href="<?= $domain.'/posts/edit.php?post_id='.$row['id'] ?>" class="btn btn-primary">Edit</a>

@@ -21,6 +21,7 @@ function sanitizeItem($var, $type)
             $var = substr($var, 0, 254);
             $filter = FILTER_SANITIZE_EMAIL;
         break;
+        case 'string':
         default:
             $filter = FILTER_SANITIZE_STRING;
             $flags = FILTER_FLAG_NO_ENCODE_QUOTES;
