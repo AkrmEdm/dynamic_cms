@@ -10,10 +10,7 @@
     $statement = $pdo->prepare($sql);
 
     $statement->execute([
-    ':title' => $title,
-    ':content' => $content,
-    ':published_date' => $published_date,
-    ':post_id' => $post_id
+        ':post_id' => $post_id
     ]);
 
     redirect('/posts');
