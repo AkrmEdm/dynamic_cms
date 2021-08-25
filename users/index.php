@@ -15,7 +15,7 @@
           <h1 class="h2">Users</h1>
 
           <div class="btn-toolbar mb-2 mb-md-0">
-            <a href="<?= $domain.'/posts/create.php' ?>" class="btn btn-sm btn-outline-secondary">Add New</button></a>
+            <a href="<?= $domain.'/users/create.php' ?>" class="btn btn-sm btn-outline-secondary">Add New</button></a>
           </div>
         </div>
 
