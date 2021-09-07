@@ -11,7 +11,7 @@
     $statement->execute([
         ':name' => $name,
         ':email' => $email,
-        ':password' => $password
+        ':password' => password_hash($password, PASSWORD_DEFAULT)
     ]);
 
     redirect('/users');
