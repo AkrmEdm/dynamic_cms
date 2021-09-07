@@ -43,7 +43,7 @@
                 <td><?= $row['published_date'] ?></td>
                 <td>
                   <a href="<?= $domain.'/posts/edit.php?post_id='.$row['id'] ?>" class="btn btn-primary">Edit</a>
-                  <a href="<?= $domain.'/posts/delete.php?post_id='.$row['id'] ?>" class="btn btn-danger">Delete</a>
+                  <a href="<?= $domain.'/posts/delete.php?post_id='.$row['id'] ?>" class="btn btn-danger must_confirm">Delete</a>
                 </td>
               </tr>
               <?php endforeach ?>

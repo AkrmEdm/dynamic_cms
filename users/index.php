@@ -41,7 +41,7 @@
                 <td><?= htmlentities($row['email']) ?></td>
                 <td>
                   <a href="<?= $domain.'/users/edit.php?user_id='.$row['id'] ?>" class="btn btn-primary">Edit</a>
-                  <a href="<?= $domain.'/users/delete.php?user_id='.$row['id'] ?>" class="btn btn-danger">Delete</a>
+                  <a href="<?= $domain.'/users/delete.php?user_id='.$row['id'] ?>" class="btn btn-danger must_confirm">Delete</a>
                 </td>
               </tr>
               <?php endforeach ?>
