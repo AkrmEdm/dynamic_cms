@@ -107,7 +107,7 @@ function sanitizeText($text)
 
 function redirect($url)
 {
-    $domain ='http://localhost/php-cms/';
+    $domain ='http://localhost/php-cms';
 
     header('Location:'.$domain.$url);
 }

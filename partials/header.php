@@ -1,6 +1,6 @@
 <?php
 
-$domain ='http://localhost/php-cms/';
+$domain ='http://localhost/php-cms';
 
 ?>
 
