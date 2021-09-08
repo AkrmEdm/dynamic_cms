@@ -5,8 +5,8 @@
 
     $user_id = $_GET['user_id'];
 
-    $sql = 'UPDATE articles SET name = :name, email = :email,
-             password = :password WHERE id = :user_id';
+    $sql = 'UPDATE users SET name = :name, email = :email,
+            password = :password WHERE id = :user_id';
 
     $statement = $pdo->prepare($sql);
 

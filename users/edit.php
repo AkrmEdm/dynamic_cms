@@ -13,8 +13,8 @@
 
     $user = $statement->fetch();
 
-    $name = $_POST['name'];
-    $email = $_POST['email'];
+    $name = $user['name'];
+    $email = $user['email'];
 
 ?>
 
