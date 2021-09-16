@@ -1,4 +1,5 @@
 <?php
+    include('../auth_middleware.php');
     include('../helpers.php');
     include('../database.php');
     include('_validate.php');
