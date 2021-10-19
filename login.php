@@ -3,6 +3,10 @@
   include('helpers.php');
   $domain ='http://localhost/php-cms';
 
+  if(isset($_COOKIE['user_email'])) {
+    $user_email = $_COOKIE['user_email'];
+  }
+
 ?>
 
 <!doctype html>
@@ -51,7 +55,7 @@
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
     <div class="form-floating">
-      <input name="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <input value="<?= $user_email ?? '' ?>" name="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
       <label for="floatingInput">Email address</label>
     </div>
     <div class="form-floating">

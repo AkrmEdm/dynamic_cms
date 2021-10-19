@@ -81,6 +81,7 @@ if (! function_exists('goBack')) {
         }
 
         header('Location:'.$link);
+        exit;
     }
 }
 
@@ -143,5 +144,6 @@ if (! function_exists('redirect')) {
         $domain ='http://localhost/php-cms';
 
         header('Location:'.$domain.$url);
+        exit;
     }
 }
