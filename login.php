@@ -1,6 +1,7 @@
 <?php
-
-$domain ='http://localhost/php-cms';
+  session_start();
+  include('helpers.php');
+  $domain ='http://localhost/php-cms';
 
 ?>
 
@@ -44,6 +45,7 @@ $domain ='http://localhost/php-cms';
   <body class="text-center">
     
 <main class="form-signin">
+  <?php displayMessage() ?>
   <form action="<?= $domain ?>/auth.php" method="POST">
     <img class="mb-4" src="#" alt="" width="72" height="57">
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>

@@ -24,6 +24,8 @@
     
     <h1 class="h2 mt-5">Edit Article</h1>
 
+    <?php displayMessage() ?>
+
     <form action="<?= $domain ?>/posts/update.php?post_id=<?= $post_id ?>" method="POST">
         <?php include("_form.php"); ?>
     </form>

@@ -9,6 +9,8 @@
     
     <h1 class="h2 mt-5">Add New Article</h1>
 
+    <?php displayMessage() ?>
+
     <form action="<?= $domain ?>/posts/store.php" method="POST">
         <?php include("_form.php"); ?>
     </form>

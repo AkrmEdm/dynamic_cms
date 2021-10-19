@@ -23,6 +23,8 @@
     
     <h1 class="h2 mt-5">Edit User</h1>
 
+    <?php displayMessage() ?>
+
     <form action="<?= $domain ?>/users/update.php?user_id=<?= $user_id ?>" method="POST">
         <?php include("_form.php"); ?>
     </form>

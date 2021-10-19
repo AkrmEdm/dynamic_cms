@@ -75,9 +75,30 @@ if (! function_exists('goBack')) {
     function goBack($msg = null)
     {
         $link = $_SERVER['HTTP_REFERER'];
-        header('Location:'.$link);
+       
+        if($msg) {
+            $_SESSION['msg'] = $msg;
+        }
 
-        //TODO Show error message using Session
+        header('Location:'.$link);
+    }
+}
+
+if (! function_exists('displayMessage')) {
+    /**
+     * Display any error messages
+     */
+    function displayMessage()
+    {
+        if(isset($_SESSION['msg'])) {
+            $msg = $_SESSION['msg'];
+
+            echo '<div class="alert alert-danger" role="alert">'.
+                    $msg.
+                    '</div>';
+
+            unset($_SESSION['msg']);
+        }
     }
 }
 

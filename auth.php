@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include('database.php');
     include('helpers.php');
 
@@ -28,7 +29,6 @@
 
     if (password_verify($password, $user['password'])) {
         // authenticate user
-        session_start();
         $_SESSION['auth_user'] = $user['id'];
         redirect('/posts');
 
