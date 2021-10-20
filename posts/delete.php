@@ -5,6 +5,15 @@
 
     $post_id = $_GET['post_id'];
 
+    // delete post id from articleImages table
+    $sql = 'DELETE FROM articleImages WHERE articles_id = :image_id';
+
+    $statement = $pdo->prepare($sql);
+
+    $statement->execute([
+        ':image_id' => $image_id
+    ]);
+
     
     $sql = 'DELETE FROM articles WHERE id = :post_id';
 

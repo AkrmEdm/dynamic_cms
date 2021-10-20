@@ -5,13 +5,21 @@
 
     $post_id = $_GET['post_id'];
 
-    
-    $sql = 'DELETE FROM articles WHERE id = :post_id';
+    // delete from articleImages
+    $sql = 'DELETE FROM articleImages WHERE images_id = :image_id';
 
     $statement = $pdo->prepare($sql);
 
     $statement->execute([
-        ':post_id' => $post_id
+        ':image_id' => $image_id
     ]);
 
-    redirect('/posts');
+    $sql = 'DELETE FROM images WHERE id = :image_id';
+
+    $statement = $pdo->prepare($sql);
+
+    $statement->execute([
+        ':image_id' => $image_id
+    ]);
+
+    redirect('/images');

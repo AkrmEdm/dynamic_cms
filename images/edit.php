@@ -6,7 +6,7 @@
 
     $image_id = $_GET['image_id'];
 
-    $sql = 'SELECT * FROM articles WHERE id = :image_id';
+    $sql = 'SELECT * FROM images WHERE id = :image_id';
     $statement = $pdo->prepare($sql);
     $statement->execute([
         ':image_id' => $image_id
