@@ -1,7 +1,6 @@
 <?php
-
-$domain ='http://localhost/php-cms';
-
+    include('../helpers.php');
+    $domain = getUrl();
 ?>
 
 <!doctype html>

@@ -141,9 +141,29 @@ if (! function_exists('sanitizeText')) {
 if (! function_exists('redirect')) {
     function redirect($url)
     {
-        $domain ='http://localhost/php-cms';
+        $domain = getUrl();
 
         header('Location:'.$domain.$url);
         exit;
+    }
+}
+
+if (! function_exists('getUrl')) {
+    function getUrl($path = null)
+    {
+        $domain ='http://localhost/php-cms';
+
+        return $domain.$path;
+    }
+}
+
+if (! function_exists('getActive')) {
+    function getActive($path)
+    {
+        if(strpos($_SERVER['REQUEST_URI'], $path)) {
+            return 'active';
+        }
+
+        return '';
     }
 }
