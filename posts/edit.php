@@ -18,6 +18,14 @@
     $content = $post['content'];
     $published_date = $post['published_date'];
 
+    $sql = 'SELECT * FROM articleimages WHERE articles_id = :post_id';
+    $statement = $pdo->prepare($sql);
+    $statement->execute([
+        ':post_id' => $post_id
+    ]);
+
+    $image = $statement->fetch();
+
 ?>
 
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">

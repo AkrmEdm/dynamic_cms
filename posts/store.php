@@ -13,7 +13,21 @@
         ':title' => $title,
         ':content' => $content,
         ':published_date' => $published_date,
-        ':users_id' => 1 // TODO add logged in user id
+        ':users_id' => $_SESSION['auth_user']
+    ]);
+    
+    $article_id = $pdo->lastInsertId();
+
+    // Adding images to article
+
+    $sql = 'INSERT INTO articleimages (images_id, articles_id)
+                VALUES (:image_id, :article_id)';
+    
+    $statement = $pdo->prepare($sql);
+
+    $statement->execute([
+        ':image_id' => $title,
+        ':article_id' => $article_id,
     ]);
 
     redirect('/posts');

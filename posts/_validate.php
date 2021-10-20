@@ -4,6 +4,7 @@
     $title = $_POST['title'];
     $content = $_POST['content'];
     $published_date = $_POST['published_date'] ?: date('Y-m-d');
+    $image_id = $_POST['image'];
 
     // validate and sanitize title
     if (isPresent($title)) {
