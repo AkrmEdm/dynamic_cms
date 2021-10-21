@@ -1,17 +1,21 @@
 <?php
-
     include('admin/database.php');
     include('admin/helpers.php');
     $domain = getUrl();
 
-    $sql = "SELECT *, images.name as image_name, articles.id as article_id FROM articles, images, articleimages, users";
+    $post_id = $_GET['post_id'];
+
+    $sql = "SELECT *, images.name as image_name FROM articles, images, articleimages, users";
     $sql .= "WHERE articles.id = articleimages.articles_id";
     $sql .= "AND images.id = articleimages.images_id";
     $sql .= "AND users.id = articles.users_id";
+    $sql .= "AND articles.id = :post_id";
 
-    $results = $pdo->query($sql);
-    $rows = $results->fetchAll();
-
+    $statement = $pdo->prepare($sql);
+    $statement->execute([
+        ':post_id' => $post_id
+    ]);
+    $post = $statement->fetch();
 ?>
 
 
@@ -20,10 +24,27 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CMS</title>
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Album example · Bootstrap v5.1</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
+
+    
 
     <!-- Bootstrap core CSS -->
     <link href="<?= $domain ?>/admin/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#7952b3">
+
 
     <style>
       .bd-placeholder-img {
@@ -49,10 +70,16 @@
   <div class="collapse bg-dark" id="navbarHeader">
     <div class="container">
       <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">About</h4>
+          <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+        </div>
         <div class="col-sm-4 offset-md-1 py-4">
           <h4 class="text-white">Contact</h4>
           <ul class="list-unstyled">
-            <li><a href="#" class="text-white"></a></li>
+            <li><a href="#" class="text-white">Follow on Twitter</a></li>
+            <li><a href="#" class="text-white">Like on Facebook</a></li>
+            <li><a href="#" class="text-white">Email me</a></li>
           </ul>
         </div>
       </div>
@@ -76,36 +103,10 @@
   <div class="album py-5 bg-light">
     <div class="container">
 
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        
-        <?php foreach($rows as $row): ?>
-        <div class="col">
-          <div class="card shadow-sm">
-            
-            <?php if(isset($row['url'])): ?>
-            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="<?= $row['url'] ?>" alt="<?= $row['image_name'] ?>">
+      <h1><?= $post['title'] ?></h1>
+      <img src="<?= $post['url'] ?>" alt="<?= $post['image_name'] ?>">
+      <?= $post['content'] ?>
 
-            <?php else: ?>
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-            
-            <?php endif ?>
-
-            <div class="card-body">
-              <h2 class="card-text h4"><?= $row['title'] ?></h2>
-              <p class="card-text"><?= substr(strip_tags($row['content']), 0, 50) ?></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a href="<?= getUrl('/post.php?post_id='.$row['article_id']); ?>" class="btn btn-sm btn-outline-secondary">View</a>
-
-                </div>
-                <small class="text-muted"><?= $row['name'] ?></small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <?php endforeach ?>
-
-      </div>
     </div>
   </div>
 
