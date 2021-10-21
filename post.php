@@ -5,11 +5,11 @@
 
     $post_id = $_GET['post_id'];
 
-    $sql = "SELECT *, images.name as image_name FROM articles, images, articleimages, users";
-    $sql .= "WHERE articles.id = articleimages.articles_id";
-    $sql .= "AND images.id = articleimages.images_id";
-    $sql .= "AND users.id = articles.users_id";
-    $sql .= "AND articles.id = :post_id";
+    $sql = "SELECT *, images.name as image_name FROM articles, images, articleimages, users ";
+    $sql .= "WHERE articles.id = articleimages.articles_id ";
+    $sql .= "AND images.id = articleimages.images_id ";
+    $sql .= "AND users.id = articles.users_id ";
+    $sql .= "AND articles.id = :post_id ";
 
     $statement = $pdo->prepare($sql);
     $statement->execute([
