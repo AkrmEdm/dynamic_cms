@@ -39,7 +39,7 @@
               <tr>
                 <td><?= $row['id'] ?></td>
                 <td><?= htmlentities($row['name']) ?></td>
-                <td><img src="<?= $row['url'] ?>" alt="<?= $row['name'] ?>"></td>
+                <td><img src="<?= $row['url'] ?>" alt="<?= $row['name'] ?>" width="200px"></td>
                 <td>
                   <a href="<?= $domain.'/images/edit.php?image_id='.$row['id'] ?>" class="btn btn-primary">Edit</a>
                   <a href="<?= $domain.'/images/delete.php?image_id='.$row['id'] ?>" class="btn btn-danger must_confirm">Delete</a>
