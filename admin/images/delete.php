@@ -3,7 +3,7 @@
     include('../helpers.php');
     include('../database.php');
 
-    $post_id = $_GET['post_id'];
+    $image_id = $_GET['image_id'];
 
     // delete from articleImages
     $sql = 'DELETE FROM articleImages WHERE images_id = :image_id';
