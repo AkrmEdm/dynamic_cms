@@ -20,7 +20,7 @@
 
     
     // delete any images from article in articleImages table
-    $sql = 'DELETE FROM articleImages WHERE article_id = :post_id';
+    $sql = 'DELETE FROM articleImages WHERE articles_id = :post_id';
 
     $statement = $pdo->prepare($sql);
 
