@@ -4,7 +4,7 @@
     include('admin/helpers.php');
     $domain = getUrl();
 
-    $sql = "SELECT *, images.name as image_name, articles.id as article_id FROM articles, images, articleimages, users ";
+    $sql = "SELECT *, images.name as image_name, articles.id as articles_id FROM articles, images, articleimages, users ";
     $sql .= "WHERE articles.id = articleimages.articles_id ";
     $sql .= "AND images.id = articleimages.images_id ";
     $sql .= "AND users.id = articles.users_id ";
@@ -45,18 +45,6 @@
   <body>
     
 <header>
-  <div class="collapse bg-dark" id="navbarHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4 offset-md-1 py-4">
-          <h4 class="text-white">Contact</h4>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-white"></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
   <div class="navbar navbar-dark bg-dark shadow-sm">
     <div class="container">
       <a href="#" class="navbar-brand d-flex align-items-center">
@@ -93,7 +81,7 @@
               <p class="card-text"><?= substr(strip_tags($row['content']), 0, 50) ?></p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a href="<?= getUrl('/post.php?post_id='.$row['article_id']); ?>" class="btn btn-sm btn-outline-secondary">View</a>
+                  <a href="<?= getUrl('/post.php?post_id='.$row['articles_id']); ?>" class="btn btn-sm btn-outline-secondary">View</a>
 
                 </div>
                 <small class="text-muted"><?= $row['name'] ?></small>
