@@ -26,7 +26,7 @@
     $statement = $pdo->prepare($sql);
 
     $statement->execute([
-        ':image_id' => $title,
+        ':image_id' => $image_id,
         ':article_id' => $article_id,
     ]);
 
