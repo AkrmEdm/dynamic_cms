@@ -1,6 +1,6 @@
 <?php
 
-    $database_name = 'photo-gallery';
+    $database_name = 'cmsdb';
     $username = 'root';
     $password = '';
     $host = 'localhost';

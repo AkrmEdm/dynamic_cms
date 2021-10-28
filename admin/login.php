@@ -51,7 +51,7 @@
 <main class="form-signin">
   <?php displayMessage() ?>
   <form action="<?= $domain ?>/admin/auth.php" method="POST">
-    <img class="mb-4" src="#" alt="" width="72" height="57">
+    <img class="mb-4" src="<?= $domain ?>/admin/uploads/logo.png" alt="" width="" height="60">
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
     <div class="form-floating">
