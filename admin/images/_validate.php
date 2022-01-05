@@ -23,7 +23,7 @@
         goBack('File must be a valid image');
     }
 
-    $target_file = '/php-cms/admin/uploads/'.$file['name'];
+    $target_file = '/dynamic_cms/admin/uploads/'.$file['name'];
     $temp_file = $file['tmp_name'];
 
     if( ! move_uploaded_file($temp_file, $_SERVER['DOCUMENT_ROOT'].$target_file)) {

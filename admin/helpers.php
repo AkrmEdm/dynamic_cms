@@ -151,7 +151,7 @@ if (! function_exists('redirect')) {
 if (! function_exists('getUrl')) {
     function getUrl($path = null)
     {
-        $domain ='http://localhost/php-cms';
+        $domain ='http://localhost/dynamic_cms';
 
         return $domain.$path;
     }
