@@ -5,6 +5,7 @@
     include('_validate.php');
 
     $image_id = $_GET['image_id'];
+    $url = $target_file;
 
     $sql = 'UPDATE images SET name = :name, url = :url
              WHERE id = :image_id';
