@@ -17,7 +17,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>CMS | Login Page</title>
+    <title><?= $appName ?> | Login Page</title>
 
     
 
