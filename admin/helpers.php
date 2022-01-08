@@ -167,3 +167,5 @@ if (! function_exists('getActive')) {
         return '';
     }
 }
+
+$appName = "CMS";
