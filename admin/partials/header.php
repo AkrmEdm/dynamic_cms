@@ -18,7 +18,7 @@
 
 
   <!-- Tiny MCE -->
-  <script src="https://cdn.tiny.cloud/1/t7lsocji9prze8b8ssenauzssy03opw6rdypsr9bxb2amoe4/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  <script src="https://cdn.tiny.cloud/1/qagffr3pkuv17a8on1afax661irst1hbr4e6tbv888sz91jc/tinymce/5-dev/tinymce.min.js" referrerpolicy="origin"></script>
   
   <!-- Bootstrap core CSS -->
   <!-- <link href="../css/bootstrap.min.css" rel="stylesheet"
