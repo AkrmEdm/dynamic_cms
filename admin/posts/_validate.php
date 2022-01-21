@@ -14,7 +14,7 @@
     }
 
     // validate and sanitize content
-    if (isPresent($title)) {
+    if (isPresent($content)) {
         $content = sanitizeText($content);
     } else {
         goBack("Content is required");
