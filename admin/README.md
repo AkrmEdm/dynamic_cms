@@ -1,10 +1,5 @@
-# php-cms
-Dynamic Content Management System with PHP and MySQL
+# dynamic_cms
 
-------------------------
+Dynamic CMS with PHP & MySQL [Course Conducted by Javaabu Academy]
 
-------------------------
-
-Article Index View
-
-Add New Article Form
+This is a dynamic Content Management System built with PHP & MySQL.
