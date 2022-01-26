@@ -5,6 +5,13 @@
     $password = '';
     $host = 'localhost';
 
-    $dsn = "mysql:host=$host;dbname=$database_name;charset=UTF8";
+    try {
+        $dsn = "mysql:host=$host;dbname=$database_name;charset=UTF8";
 
-    $pdo = new PDO($dsn, $username, $password);
+        $pdo = new PDO($dsn, $username, $password);
+
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } 
+    catch(PDOException $e) {
+        echo $e->getMessage();
+    }
